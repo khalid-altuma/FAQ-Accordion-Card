@@ -1,0 +1,183 @@
+
+html, body {
+
+    margin: 0;
+    height: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: rgb(101,101,224);
+    background: linear-gradient(0deg, #6565e0 0%, #af67e9 100%);
+}
+
+.container {
+    background-color: #ffff;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 2rem;
+
+    width: 64rem;
+}
+
+.img-div {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: 70%;
+    background-position-y: 50%;
+    background-size: 100%;
+}
+
+.girl-img {
+    width: 30rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.box-img {
+    position: relative;
+    bottom: 25%;
+    right: 5%;
+}
+
+.faq-h1 {
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: hsl(238, 29%, 16%);
+    background-color: transparent;
+}
+
+
+.accordion {
+    padding: 1rem;
+  }
+
+  .label::before {
+
+    content: url(images/icon-arrow-down.svg);
+    position: absolute;
+    right: -0.5rem;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    transition: 0.5s;
+  }
+
+.containerr {
+    position: relative;
+  }
+  
+  /* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+  
+.label {
+    position: relative;
+    cursor: pointer;
+    color: hsl(238, 29%, 16%);
+  }
+  
+  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.content {
+    font-size: 0.9rem;
+
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  /* Adds a horizontal line between the contents */
+  
+  hr {
+
+    margin-left: 0;
+    border: 1px solid hsl(240, 5%, 91%);
+  }
+
+.faq-body {
+    position: relative;
+}
+.accordion-body {
+    width: 30rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.label:hover {
+    color: hsl(14, 88%, 65%);
+}
+.active.label:hover {
+    color: black;
+}
+.active .label {
+    font-weight: 700;
+}
+/* Unhides the content part when active. Sets the height */
+
+.active .content {
+    margin: 0.5rem 0;
+    height: 3rem;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.active .label::before {
+    rotate: 180deg;
+    font-size: 1rem;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+
+#credit {
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: fixed;
+    left: 50%;
+    top: 98%;
+    transform: translate(-50%, -50%);
+}
+#credit-a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+    .container {
+        width: 90%;
+    }
+    .girl-img {
+        width: 22.5rem;
+        position: absolute;
+        top: -16%;
+    
+    }
+    .box-img {
+        width: 7rem;
+        position: absolute;
+        top: -29%;
+        left: 17%;
+    }
+    .img-div {
+        position: relative;
+        height: 10rem;
+        background-position-x: 50%;
+        background-position-y: 105%;
+        background-size: 80%;
+    }
+    .faq-div {
+        text-align: center;
+        background-color: transparent;
+    }
+    .faq-h1 {
+        font-size: 2.75rem;
+    }
+}
