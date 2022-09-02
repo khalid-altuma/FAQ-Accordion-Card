@@ -1,6 +1,5 @@
 
 html, body {
-
     margin: 0;
     height: 100%;
     font-family: 'Kumbh Sans', sans-serif;
@@ -50,13 +49,11 @@ html, body {
     background-color: transparent;
 }
 
-
 .accordion {
     padding: 1rem;
   }
 
-  .label::before {
-
+.label::before {
     content: url(images/icon-arrow-down.svg);
     position: absolute;
     right: -0.5rem;
@@ -68,16 +65,12 @@ html, body {
 .containerr {
     position: relative;
   }
-  
-  /* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
-  
+
 .label {
     position: relative;
     cursor: pointer;
     color: hsl(238, 29%, 16%);
   }
-  
-  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
 
 .content {
     font-size: 0.9rem;
@@ -88,10 +81,7 @@ html, body {
     transition: 0.5s;
   }
   
-  /* Adds a horizontal line between the contents */
-  
   hr {
-
     margin-left: 0;
     border: 1px solid hsl(240, 5%, 91%);
   }
@@ -110,20 +100,20 @@ html, body {
 .label:hover {
     color: hsl(14, 88%, 65%);
 }
+/* this didn't work */
 .active.label:hover {
     color: black;
 }
+
 .active .label {
     font-weight: 700;
 }
-/* Unhides the content part when active. Sets the height */
 
+/* Unhides the content part when active. Sets the height */
 .active .content {
     margin: 0.5rem 0;
     height: 3rem;
 }
-
-/* Changes from plus sign to negative sign once active */
 
 .active .label::before {
     rotate: 180deg;
@@ -131,7 +121,6 @@ html, body {
     top: 50%;
     transform: translateY(50%);
 }
-
 
 #credit {
     color: white;
